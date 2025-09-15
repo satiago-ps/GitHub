@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,17 +6,65 @@
     </head>
     <body>
         <!-- Título principal de la página -->
-        <h1>Ejemplo de HTML con Comentarios</h1>
-        <h1>asdasd</h1>
-        <h2>asdasd</h2>
-        <h3>asdasd</h3>
-        <!-- Párrafos en HTML -->
-        <p>Este es un párrafo creado para la clase.</p>
+        <h1>Javascript</h1>
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" value="Juan">
+        <button onclick="saludar()">Saludar</button>
+        <label id="txtmostrar">Digite algo..</label>
 
-        <!-- Cambiar el color del texto directamente en el atributo style -->
-        <p style="color: greenyellow;">Esta indicación es muy importante en color greenyellow.</p>
+        <!--Imagenes-->
+        <h2>Enlace a otra página</h2>
+        <a href="www.google.com.co"> 
+            Texto para hipervinculo
+        </a>
+        <br>
+        <a href="https://www.google.com.co">
+            <img src="https://th.bing.com/th/id/OIP.xWsJcsNxykr9qGA0UrYAawHaEo?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" title="Imagen de ejemplo">
+        </a>
 
-        <!-- Cambiar el tipo de letra directamente -->
-        <p style="font-family: Arial, sans-serif;">Este párrafo usa la fuente Arial.</p>
+        <h2>Imagen desde una URL</h2>
+        <img src="https://4.bp.blogspot.com/-Z9LAdTnwEOA/WSWURgnHx6I/AAAAAAABv30/qJEVQJEvmTMgU7syjEgBGP12uJyHaZRxQCLcB/s1600/_170524-foto-de-aviones-imajenes-avioneta-fotografias-helicopteros-imagenes.jpg" alt="Imagen de ejemplo" width="150" height="300">
+        
+        
+        <h2>Lista Ordenada</h2>
+        <ol>
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+            <li>Tercer elemento</li>
+        </ol>
+
+        <h2>Lista No Ordenada</h2>
+        <ul>
+            <li>
+                <p>
+                    asdasd
+                    <b>
+                        <i>
+                            texto
+                        </i>
+                    </b>
+                </p>
+                Manzana
+            </li>
+            <li>Banana</li>
+            <li>Naranja</li>
+        </ul>
+
+
+
+
     </body>
+    <!-- Codigo javascript -->
+    <script>
+       let nombre = "Juan"; //variable local
+       var apellido = "Pérez"; //variable global  
+       
+       function saludar(){
+           let mensaje = "Hola "+nombre+" "+apellido;
+           let nombreIngresado = document.getElementById("txtNombre").value;
+           document.getElementById("txtmostrar").innerHTML = "Hola "+nombreIngresado;
+           console.log(mensaje);
+           document.getElementById("txtNombre").value = " ";
+       }
+    </script>
 </html>
